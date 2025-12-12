@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Expense Tracker - Ứng dụng quản lý chi tiêu thông minh dành cho sinh viên, freelancer và người trẻ. Đơn giản, bảo mật, không quảng cáo."
+    />
+    <meta
+      name="keywords"
+      content="quản lý chi tiêu, expense tracker, ngân sách, tài chính cá nhân, mobile app"
+    />
+    <meta name="author" content="4T Mobile" />
+    <title>Expense Tracker App – Quản Lý Chi Tiêu Thông Minh</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="circle-decoration circle-1"></div>
+      <div class="circle-decoration circle-2"></div>
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-text fade-in">
+            <h1>Expense Tracker App</h1>
+            <p>
+              Expense Tracker là ứng dụng hỗ trợ người dùng quản lý chi tiêu
+              hàng ngày với giao diện đơn giản, rõ ràng và dễ sử dụng.
+            </p>
+            <div class="hero-buttons">
+              <a href="#download" class="btn">Tải ứng dụng (sắp ra mắt)</a>
+              <a href="#features" class="btn btn-secondary"
+                >Khám phá tính năng</a
+              >
+            </div>
+          </div>
+          <div class="hero-image fade-in fade-in-delay-2">
+            <div class="phone-carousel">
+              <!-- Ảnh 1: Mockup chính từ Behance (có dashboard + vòng tròn trang trí) -->
+              <div class="carousel-slide active">
+                <img
+                  src="./assets/onb1.jpg"
+                  alt="Expense Tracker – Mockup chính"
+                  loading="lazy"
+                />
+              </div>
+
+              <!-- Ảnh 2: Dashboard chi tiết -->
+              <div class="carousel-slide">
+                <img
+                  src="./assets/onb2.jpg"
+                  alt="Dashboard – Tổng quan chi tiêu"
+                  loading="lazy"
+                />
+              </div>
+
+              <!-- Ảnh 3: Add Expense + Expenses List -->
+              <div class="carousel-slide">
+                <img
+                  src="./assets/onb3.jpg"
+                  alt="Thêm chi tiêu & Danh sách"
+                  loading="lazy"
+                />
+              </div>
+
+              <!-- Ảnh 4: Budget + Profile -->
+              <div class="carousel-slide">
+                <img
+                  src="./assets/dasjborad.jpg"
+                  alt="Ngân sách & Hồ sơ cá nhân"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+
+            <!-- Nút điều hướng -->
+            <button class="carousel-prev" onclick="changeSlide(-1)">❮</button>
+            <button class="carousel-next" onclick="changeSlide(1)">❯</button>
+
+            <!-- Dots chỉ thị -->
+            <div class="carousel-dots">
+              <span class="dot active" onclick="currentSlide(0)"></span>
+              <span class="dot" onclick="currentSlide(1)"></span>
+              <span class="dot" onclick="currentSlide(2)"></span>
+              <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Problem & Value -->
+    <section class="problem-value">
+      <div class="container">
+        <h2 style="text-align: center">Vấn Đề & Giải Pháp</h2>
+        <p style="text-align: center; max-width: 700px; margin: 0 auto 40px">
+          Chúng tôi hiểu những thách thức bạn đang đối mặt
+        </p>
+
+        <div class="problem-grid">
+          <div class="problem-card fade-in">
+            <div class="icon-badge">❌</div>
+            <h3>Vấn Đề Hiện Tại</h3>
+            <p>
+              Nhiều người gặp khó khăn trong việc theo dõi chi tiêu hàng ngày,
+              dẫn đến tình trạng chi vượt ngân sách. Các ứng dụng hiện tại
+              thường phức tạp, đầy quảng cáo hoặc yêu cầu đăng ký phức tạp.
+            </p>
+          </div>
+
+          <div class="problem-card fade-in fade-in-delay-1">
+            <div class="icon-badge">🎯</div>
+            <h3>Đối Tượng Người Dùng</h3>
+            <p>Được thiết kế đặc biệt cho:</p>
+            <div class="target-users">
+              <span class="user-tag">👨‍🎓 Sinh viên</span>
+              <span class="user-tag">💼 Freelancer</span>
+              <span class="user-tag">👥 Người trẻ</span>
+            </div>
+          </div>
+
+          <div class="problem-card fade-in fade-in-delay-2">
+            <div class="icon-badge">✨</div>
+            <h3>Giá Trị Độc Đáo</h3>
+            <p>
+              ✓ Theo dõi chi tiêu đơn giản<br />✓ Ghi chép nhanh chóng<br />✓
+              Tập trung vào bảo mật<br />✓ Không quảng cáo<br />✓ Không yêu cầu
+              đăng ký phức tạp
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features" id="features">
+      <div class="container">
+        <h2 style="text-align: center">Chức Năng Chính (MVP)</h2>
+        <p style="text-align: center; max-width: 700px; margin: 0 auto">
+          Mọi tính năng bạn cần để quản lý tài chính hiệu quả
+        </p>
+
+        <div class="features-grid">
+          <div class="feature-card fade-in">
+            <span class="feature-icon">⚡</span>
+            <h3>Thêm Chi Tiêu Nhanh</h3>
+            <p>Thêm chi tiêu nhanh và chính xác chỉ trong vài giây</p>
+            <div class="feature-details">
+              <ul>
+                <li>Tên giao dịch rõ ràng</li>
+                <li>Số tiền chính xác</li>
+                <li>Danh mục phân loại</li>
+                <li>Ngày tháng tự động</li>
+                <li>Ghi chú bổ sung</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="feature-card fade-in fade-in-delay-1">
+            <span class="feature-icon">💰</span>
+            <h3>Thiết Lập Ngân Sách</h3>
+            <p>Thiết lập và theo dõi ngân sách theo thời gian thực</p>
+            <div class="feature-details">
+              <ul>
+                <li>Ngân sách theo tháng/tuần</li>
+                <li>Theo dõi tiến độ real-time</li>
+                <li>Cảnh báo khi gần hết</li>
+                <li>Phân tích xu hướng</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="feature-card fade-in fade-in-delay-2">
+            <span class="feature-icon">📊</span>
+            <h3>Theo Dõi Tổng Quan</h3>
+            <p>Dashboard rõ ràng với thống kê chi tiết</p>
+            <div class="feature-details">
+              <ul>
+                <li>Chi tiêu hôm nay</li>
+                <li>Tổng quan tuần này</li>
+                <li>Báo cáo tháng này</li>
+                <li>Chi tiêu trung bình/ngày</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="feature-card fade-in">
+            <span class="feature-icon">✏️</span>
+            <h3>Quản Lý Dễ Dàng</h3>
+            <p>Xem, chỉnh sửa và xóa giao dịch một cách linh hoạt</p>
+            <div class="feature-details">
+              <ul>
+                <li>Xem danh sách đầy đủ</li>
+                <li>Chỉnh sửa nhanh chóng</li>
+                <li>Xóa an toàn</li>
+                <li>Tìm kiếm thông minh</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="feature-card fade-in fade-in-delay-1">
+            <span class="feature-icon">🔒</span>
+            <h3>Bảo Mật Tuyệt Đối</h3>
+            <p>Thông tin cá nhân được bảo vệ tối đa</p>
+            <div class="feature-details">
+              <ul>
+                <li>Chỉnh sửa profile</li>
+                <li>Đổi mật khẩu bảo mật</li>
+                <li>Lưu trữ local an toàn</li>
+                <li>Không chia sẻ dữ liệu</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="feature-card fade-in fade-in-delay-2">
+            <span class="feature-icon">🎨</span>
+            <h3>Giao Diện Đơn Giản</h3>
+            <p>Thiết kế trực quan, dễ sử dụng cho mọi người</p>
+            <div class="feature-details">
+              <ul>
+                <li>Giao diện tối ưu mobile</li>
+                <li>Màu sắc dễ nhìn</li>
+                <li>Navigation rõ ràng</li>
+                <li>Không cần học phức tạp</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Screenshots -->
+    <section class="screenshots">
+      <div class="circle-decoration circle-1"></div>
+      <div class="container">
+        <h2>Giao Diện Ứng Dụng</h2>
+        <p style="max-width: 700px; margin: 0 auto 40px">
+          Giao diện đơn giản với tông màu xanh chủ đạo, dễ sử dụng trên mobile
+        </p>
+
+        <div class="screenshot-gallery">
+          <div class="screenshot-item fade-in">
+            <img
+              src="./assets/dasjborad.jpg"
+              alt="Dashboard - Tổng quan chi tiêu"
+              loading="lazy"
+            />
+            <p class="screenshot-caption">Dashboard</p>
+          </div>
+          <div class="screenshot-item fade-in fade-in-delay-1">
+            <img
+              src="./assets/list-exp.jpg"
+              alt="Danh sách chi tiêu"
+              loading="lazy"
+            />
+            <p class="screenshot-caption">Danh Sách Chi Tiêu</p>
+          </div>
+          <div class="screenshot-item fade-in fade-in-delay-2">
+            <img
+              src="./assets/new-budget.jpg"
+              alt="Thiết lập ngân sách"
+              loading="lazy"
+            />
+            <p class="screenshot-caption">Thiết Lập Ngân Sách</p>
+          </div>
+        </div>
+
+        <div style="margin-top: 60px">
+          <a
+            href="https://www.figma.com/community/file/YOUR-FIGMA-LINK"
+            target="_blank"
+            class="btn"
+            style="margin-right: 15px"
+            >Xem Prototype Figma →</a
+          >
+          <a
+            href="https://www.behance.net/gallery/240262571/Expense-tracker"
+            target="_blank"
+            class="btn btn-secondary"
+            >Xem trên Behance →</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+      <div class="container">
+        <h2 style="text-align: center">Người Dùng Nói Gì</h2>
+        <p style="text-align: center; max-width: 700px; margin: 0 auto">
+          Phản hồi từ những người đã trải nghiệm
+        </p>
+
+        <div class="testimonials-grid">
+          <div class="testimonial-card fade-in">
+            <p class="testimonial-text">
+              "App này thực sự đơn giản và tiện lợi! Tôi là sinh viên và cần
+              quản lý chi tiêu hàng tháng. Expense Tracker giúp tôi theo dõi mọi
+              khoản chi dễ dàng và không bị phức tạp như các app khác."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">MH</div>
+              <div class="author-info">
+                <strong>Minh Hoàng</strong>
+                <span>Sinh viên ĐH Kinh tế</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card fade-in fade-in-delay-1">
+            <p class="testimonial-text">
+              "Là freelancer, thu nhập của tôi không cố định nên quản lý chi
+              tiêu rất quan trọng. App này giúp tôi đặt ngân sách và cảnh báo
+              khi chi tiêu vượt mức. Rất hữu ích!"
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">TL</div>
+              <div class="author-info">
+                <strong>Thu Linh</strong>
+                <span>Freelance Designer</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card fade-in fade-in-delay-2">
+            <p class="testimonial-text">
+              "Giao diện đơn giản, không quảng cáo phiền phức. Tôi thích nhất là
+              tính năng bảo mật - dữ liệu lưu trữ local và không bị chia sẻ. Đây
+              là app quản lý chi tiêu tốt nhất mà tôi từng dùng."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">QA</div>
+              <div class="author-info">
+                <strong>Quốc Anh</strong>
+                <span>Nhân viên văn phòng</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+      <div class="container">
+        <h2 style="text-align: center">Câu Hỏi Thường Gặp</h2>
+        <p style="text-align: center; max-width: 700px; margin: 0 auto">
+          Giải đáp những thắc mắc phổ biến
+        </p>
+
+        <div class="faq-container">
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+              <h3>App có miễn phí không?</h3>
+              <span class="faq-toggle">▼</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Có, Expense Tracker hoàn toàn miễn phí. Không có quảng cáo,
+                không có gói đăng ký trả phí. Chúng tôi tin rằng mọi người đều
+                xứng đáng có công cụ quản lý tài chính tốt mà không phải trả
+                tiền.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+              <h3>Dữ liệu được lưu trữ như thế nào?</h3>
+              <span class="faq-toggle">▼</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Dữ liệu được lưu trữ cục bộ trên thiết bị của bạn, đảm bảo bảo
+                mật và không bị chia sẻ với bên thứ ba. Không có dữ liệu nào
+                được gửi lên server mà không có sự cho phép của bạn.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+              <h3>App có hỗ trợ đồng bộ hóa giữa các thiết bị không?</h3>
+              <span class="faq-toggle">▼</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Hiện tại, app tập trung vào lưu trữ local để đảm bảo tốc độ và
+                bảo mật. Trong phiên bản tương lai, chúng tôi sẽ thêm tính năng
+                đồng bộ hóa đám mây với mã hóa end-to-end.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+              <h3>Làm thế nào để bắt đầu sử dụng app?</h3>
+              <span class="faq-toggle">▼</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Chỉ cần tải app từ cửa hàng (sắp ra mắt), đăng ký tài khoản đơn
+                giản với email và mật khẩu, sau đó bạn có thể bắt đầu thêm chi
+                tiêu và thiết lập ngân sách ngay lập tức!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+      <div class="container">
+        <h2>Nhận Cập Nhật Mới Nhất</h2>
+        <p style="text-align: center; max-width: 700px; margin: 0 auto">
+          Đăng ký email để nhận thông báo về bản cập nhật, tính năng mới và ngày
+          ra mắt chính thức.
+        </p>
+
+        <form class="newsletter-form">
+          <input
+            type="email"
+            placeholder="Nhập email của bạn"
+            required
+            aria-label="Email để đăng ký"
+          />
+          <button type="submit" class="btn">Đăng ký</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div>
+            <h3>Expense Tracker</h3>
+            <p>Quản lý chi tiêu thông minh cho cuộc sống dễ dàng hơn</p>
+          </div>
+
+          <ul class="footer-links">
+            <li><a href="#features">Tính năng</a></li>
+            <li>
+              <a
+                href="https://www.figma.com/community/file/YOUR-FIGMA-LINK"
+                target="_blank"
+                >Figma Prototype</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.behance.net/gallery/240262571/Expense-tracker"
+                target="_blank"
+                >Behance Project</a
+              >
+            </li>
+          </ul>
+
+          <div>
+            <h3>Theo dõi chúng tôi</h3>
+            <div class="social-icons">
+              <a href="#" class="social-icon" aria-label="Facebook">FB</a>
+              <a href="#" class="social-icon" aria-label="Twitter">TW</a>
+              <a href="#" class="social-icon" aria-label="Instagram">IG</a>
+            </div>
+          </div>
+        </div>
+
+        <p>© 2025 Expense Tracker by 4T Mobile. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      function toggleFAQ(el) {
+        const item = el.parentNode;
+        item.classList.toggle("active");
+      }
+
+      let slideIndex = 0;
+      const slides = document.querySelectorAll(".carousel-slide");
+      const dots = document.querySelectorAll(".dot");
+
+      function showSlide(n) {
+        slides.forEach((s) => s.classList.remove("active"));
+        dots.forEach((d) => d.classList.remove("active"));
+
+        slideIndex = (n + slides.length) % slides.length;
+        slides[slideIndex].classList.add("active");
+        dots[slideIndex].classList.add("active");
+      }
+
+      function changeSlide(n) {
+        showSlide(slideIndex + n);
+      }
+      function currentSlide(n) {
+        showSlide(n);
+      }
+
+      setInterval(() => changeSlide(1), 2000);
+      showSlide(0);
+    </script>
+  </body>
+</html>
