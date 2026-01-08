@@ -18,7 +18,6 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./style.css" />
-     
   </head>
   <body>
     <!-- Hero -->
@@ -34,7 +33,12 @@
               hàng ngày với giao diện đơn giản, rõ ràng và dễ sử dụng.
             </p>
             <div class="hero-buttons">
-              <a href="#download" class="btn">Tải ứng dụng (sắp ra mắt)</a>
+              <a
+                href="https://drive.google.com/drive/folders/1iOvSV5Pp8YxvHbT3Ve7D8CwEEAG25fwr"
+                class="btn"
+              >
+                Tải ứng dụng
+              </a>
               <a href="#features" class="btn btn-secondary"
                 >Khám phá tính năng</a
               >
@@ -273,7 +277,7 @@
 
         <div style="margin-top: 60px">
           <a
-            href="https://www.figma.com/community/file/YOUR-FIGMA-LINK"
+            href="https://www.figma.com/design/xpYDF7joCpmgdHUzslA7vs/MobileApp-Expense-Tracker"
             target="_blank"
             class="btn"
             style="margin-right: 15px"
@@ -284,6 +288,12 @@
             target="_blank"
             class="btn btn-secondary"
             >Xem trên Behance →</a
+          >
+          <a
+            href="https://www.canva.com/design/DAG9zSpBzjM/hpX6OVGpNeUnvyH2NZOcGQ/watch?utm_content=DAG9zSpBzjM&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hc6b62843ee"
+            target="_blank"
+            class="btn btn-secondary"
+            >Xem poster trên canva →</a
           >
         </div>
       </div>
@@ -478,32 +488,32 @@
     </footer>
   </body>
   <script>
-      function toggleFAQ(el) {
-        const item = el.parentNode;
-        item.classList.toggle("active");
-      }
+    function toggleFAQ(el) {
+      const item = el.parentNode;
+      item.classList.toggle("active");
+    }
 
-      let slideIndex = 0;
-      const slides = document.querySelectorAll(".carousel-slide");
-      const dots = document.querySelectorAll(".dot");
+    let slideIndex = 0;
+    const slides = document.querySelectorAll(".carousel-slide");
+    const dots = document.querySelectorAll(".dot");
 
-      function showSlide(n) {
-        slides.forEach((s) => s.classList.remove("active"));
-        dots.forEach((d) => d.classList.remove("active"));
+    function showSlide(n) {
+      slides.forEach((s) => s.classList.remove("active"));
+      dots.forEach((d) => d.classList.remove("active"));
 
-        slideIndex = (n + slides.length) % slides.length;
-        slides[slideIndex].classList.add("active");
-        dots[slideIndex].classList.add("active");
-      }
+      slideIndex = (n + slides.length) % slides.length;
+      slides[slideIndex].classList.add("active");
+      dots[slideIndex].classList.add("active");
+    }
 
-      function changeSlide(n) {
-        showSlide(slideIndex + n);
-      }
-      function currentSlide(n) {
-        showSlide(n);
-      }
+    function changeSlide(n) {
+      showSlide(slideIndex + n);
+    }
+    function currentSlide(n) {
+      showSlide(n);
+    }
 
-      setInterval(() => changeSlide(1), 2000);
-      showSlide(0);
-    </script>
+    setInterval(() => changeSlide(1), 2000);
+    showSlide(0);
+  </script>
 </html>
